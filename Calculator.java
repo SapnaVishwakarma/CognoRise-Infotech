@@ -144,7 +144,15 @@ public class Calculator implements ActionListener{
                     result=num1*num2;
                     break;
                 case'/':
+                    try {
+                        if (num2 == 0) {
+                            throw new ArithmeticException("Division by zero!");
+                        }
                     result=num1/num2;
+                    } catch (ArithmeticException ex) {
+                        textfield.setText("Error: " + ex.getMessage());
+                        return;
+                    }
                     break;
             }
             textfield.setText(String.valueOf(result));
