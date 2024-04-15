@@ -4,7 +4,6 @@ public class Random {
 
         public static void main(String [] args) {
             Scanner scanner = new Scanner(System.in);
-
             int randomNumber = (int) (Math.random()*100) +1;
             System.out.println("Enter your guess (1-100):");
             System.out.println("You Have 10 guess");
